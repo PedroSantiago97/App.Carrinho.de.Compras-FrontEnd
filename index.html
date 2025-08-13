@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header class="header">
+      <h1>Minhas Tarefas</h1>
+      <p>Organize seu dia de forma simples</p>
+    </header>
+
+    <!-- Barra de progresso -->
+    <div class="progress-container">
+      <div class="progress-header">
+        <span>Progresso</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar-background">
+        <div id="progress-bar" class="progress-bar-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="form-container">
+      <form id="taskForm">
+        <input id="taskTitle" type="text" placeholder="Adicionar nova tarefa..." required autocomplete="off" />
+        <button type="submit"><i class="fas fa-plus"></i></button>
+      </form>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <button id="btnPending">Pendentes</button>
+      <button id="btnCompleted">Concluídas</button>
+    </div>
+
+    <!-- Lista -->
+    <div id="taskList" class="taskList">
+      <div id="empty-state" class="empty-state">
+        <i class="fas fa-tasks"></i>
+        <h3>Nenhuma tarefa adicionada</h3>
+        <p>Adicione tarefas para começar</p>
+      </div>
+    </div>
+
+    <!-- Ações -->
+    <div class="actions">
+      <button id="btnConclude">Concluir selecionadas</button>
+      <button id="btnDeleteSelected">Excluir selecionadas</button>
+    </div>
+
+    <!-- Popup -->
+    <div id="confirm-popup" class="popup hidden">
+      <div class="popup-box">
+        <h3>Remover tarefa?</h3>
+        <p>Esta ação não pode ser desfeita. A tarefa será permanentemente removida.</p>
+        <div class="popup-actions">
+          <button id="cancel-delete">Cancelar</button>
+          <button id="confirm-delete">Remover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+body {
+  font-family: sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #4a5568;
+}
+
+.progress-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-background {
+  background-color: #e2e8f0;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #48bb78;
+  border-radius: 6px;
+  transition: width 0.3s ease-in-out;
+}
+
+.form-container {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+#taskForm {
+  display: flex;
+}
+
+#taskTitle {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+#taskForm button {
+  margin-left: 0.5rem;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#taskForm button:hover {
+  background-color: #38a169;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #edf2f7;
+  color: #4a5568;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.taskList {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  min-height: 80px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #a0aec0;
+  font-size: 1rem;
+}
+
+.empty-state i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #cbd5e0;
+}
+
+.empty-state h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #718096;
+}
+
+.empty-state p {
+  color: #a0aec0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.actions button {
+  flex: 1;
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+#btnConclude {
+  background-color: #48bb78;
+}
+
+#btnConclude:hover {
+  background-color: #38a169;
+}
+
+#btnDeleteSelected {
+  background-color: #f56565;
+}
+
+#btnDeleteSelected:hover {
+  background-color: #e53e3e;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.popup-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#cancel-delete {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+#confirm-delete {
+  background-color: #f56565;
+  color: white;
+}
+
+#confirm-delete:hover {
+  background-color: #e53e3e;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-title {
+  color: #2d3748; /* equivalente ao text-gray-800 */
+  font-size: 0.875rem; /* equivalente ao text-sm */
+  word-wrap: break-word; /* para quebrar linha */
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #a0aec0; /* equivalente ao text-gray-400 */
+}
+
