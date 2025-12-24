@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Painel Administrativo</h1>
+    <div class="auth">
+      <span id="loggedAs" class="hidden"></span>
+      <button id="btnLogout">Sair</button>
+      <button id="btnStore">Ir para Loja</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="admin-main">
+      <section class="admin-section">
+        <h2>Adicionar Produto</h2>
+        <form id="addProductForm">
+          <div class="form-group">
+            <label for="pName">Nome do Produto</label>
+            <input 
+              id="pName" 
+              type="text" 
+              placeholder="Ex: Notebook Dell" 
+              required 
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="pImage">URL da Imagem</label>
+            <input 
+              id="pImage" 
+              type="url" 
+              placeholder="https://exemplo.com/imagem.jpg" 
+              required 
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="pPrice">Preço (R$)</label>
+            <input 
+              id="pPrice" 
+              type="number" 
+              step="0.01" 
+              min="0.01" 
+              placeholder="99.99" 
+              required 
+            />
+          </div>
+          
+          <div id="productErrorMessage" class="error-message hidden"></div>
+          <div id="productSuccessMessage" class="success-message hidden"></div>
+          
+          <button type="submit" class="btn-primary">Adicionar Produto</button>
+        </form>
+      </section>
+
+      <section class="admin-section">
+        <h2>Clientes e Compras</h2>
+        <button id="btnLoadClients" class="btn-secondary">Carregar Clientes</button>
+        <div id="clientsList" class="clients-list hidden">
+          <ul id="clientsUl"></ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Scripts modulares -->
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/clients.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
+
