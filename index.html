@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Loja - Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Loja</h1>
+    <div class="auth">
+      <button id="btnLogin">Login</button>
+      <button id="btnRegister">Cadastrar</button>
+      <span id="loggedAs" class="hidden"></span>
+      <button id="btnAdmin" class="hidden">Admin</button>
+      <button id="btnLogout" class="hidden">Sair</button>
+    </div>
+  </header>
+
+  <main class="main-store">
+    <div class="controls">
+      <input id="search" placeholder="Buscar produto..." />
+      <button id="btnRefresh">Atualizar</button>
+    </div>
+
+    <div id="products" class="products"></div>
+  </main>
+
+  <!-- Scripts modulares -->
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

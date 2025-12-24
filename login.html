@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Login</h1>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input 
+            id="login" 
+            type="text" 
+            placeholder="Digite seu login" 
+            required 
+            autocomplete="username"
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input 
+            id="password" 
+            type="password" 
+            placeholder="Digite sua senha" 
+            required 
+            autocomplete="current-password"
+          />
+        </div>
+        
+        <div id="errorMessage" class="error-message hidden"></div>
+        
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+      
+      <div class="login-footer">
+        <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+        <p><a href="index.html">Voltar para a loja</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts modulares -->
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
+
